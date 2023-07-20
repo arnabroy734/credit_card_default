@@ -1,0 +1,67 @@
+[2023-07-20 20:57:02,647] INFO 
+
+Starting validation of training data]
+[2023-07-20 20:57:02,647] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 20:57:02,661] ERROR File cannot be opened]
+[2023-07-20 20:57:45,103] INFO 
+
+Starting validation of training data]
+[2023-07-20 20:57:45,103] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 20:57:46,806] INFO File opened successfully]
+[2023-07-20 20:57:46,806] ERROR Column name mismatch]
+[2023-07-20 20:58:34,934] INFO 
+
+Starting validation of training data]
+[2023-07-20 20:58:34,934] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 20:58:36,618] INFO File opened successfully]
+[2023-07-20 20:58:36,619] ERROR Column name LIMIT_BAL mismatch]
+[2023-07-20 20:59:09,643] INFO 
+
+Starting validation of training data]
+[2023-07-20 20:59:09,643] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 20:59:11,355] INFO File opened successfully]
+[2023-07-20 20:59:11,355] INFO Column name validation successful]
+[2023-07-20 20:59:11,364] INFO Datatype validation successful]
+[2023-07-20 20:59:11,368] INFO Missing value validation successful]
+[2023-07-20 20:59:11,369] INFO End of successful training data validation
+
+]
+[2023-07-20 20:59:57,217] INFO 
+
+Starting validation of training data]
+[2023-07-20 20:59:57,217] ERROR File ./data/data_uploaded.xls does not exist]
+[2023-07-20 21:00:24,432] INFO 
+
+Starting validation of training data]
+[2023-07-20 21:00:24,432] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 21:00:26,124] INFO File opened successfully]
+[2023-07-20 21:00:26,124] INFO Column name validation successful]
+[2023-07-20 21:00:26,134] INFO Datatype validation successful]
+[2023-07-20 21:00:26,136] ERROR Missing value found in PAY_6]
+[2023-07-20 21:00:45,308] INFO 
+
+Starting validation of training data]
+[2023-07-20 21:00:45,308] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 21:00:47,097] INFO File opened successfully]
+[2023-07-20 21:00:47,097] INFO Column name validation successful]
+[2023-07-20 21:00:47,097] ERROR Datatype mismatch in column PAY_6]
+[2023-07-20 21:01:16,225] INFO 
+
+Starting validation of training data]
+[2023-07-20 21:01:16,225] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 21:01:17,928] INFO File opened successfully]
+[2023-07-20 21:01:17,928] INFO Column name validation successful]
+[2023-07-20 21:01:17,937] INFO Datatype validation successful]
+[2023-07-20 21:01:17,941] INFO Missing value validation successful]
+[2023-07-20 21:01:17,941] INFO End of successful training data validation
+
+]
+[2023-07-20 21:02:38,214] INFO Starting validation of training data]
+[2023-07-20 21:02:38,215] INFO File ./data/data_uploaded.xls exists]
+[2023-07-20 21:02:40,094] INFO File opened successfully]
+[2023-07-20 21:02:40,094] INFO Column name validation successful]
+[2023-07-20 21:02:40,105] INFO Datatype validation successful]
+[2023-07-20 21:02:40,109] INFO Missing value validation successful]
+[2023-07-20 21:02:40,109] INFO End of successful training data validation
+
+]
