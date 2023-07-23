@@ -2,7 +2,8 @@ import logging
 
 
 filenames = dict(
-    VALIDATION_LOGS = "./logs/validation_log.txt"    
+    VALIDATION_LOGS = "./logs/validation_log.txt" ,
+    PREPROCESSING_LOGS = "./logs/preprocessing_logs.txt"   
     
 )
 
@@ -38,6 +39,10 @@ class AppLogger:
     def log_validation(self, message, level):
         validation_logger = self.custom_log("VALIDATION_LOGS")
         self.write_log(validation_logger, message, level)
+
+    def log_preprocessing(self, message, level):
+        preprocessing_logger = self.custom_log("PREPROCESSING_LOGS")
+        self.write_log(preprocessing_logger, message, level)
 
     
 

@@ -1,7 +1,13 @@
 from validation.validation import TrainDataValidation
+from preprocessing.preprocessing import Preprocessor
 
 if __name__=="__main__":
+    # try:
+    #     TrainDataValidation().validate()
+    # except:
+    #     print("Validation faild")
+
     try:
-        TrainDataValidation().validate()
+        Preprocessor().preprocess()
     except:
-        print("Validation faild")
+        print("Preprocessing Failed")

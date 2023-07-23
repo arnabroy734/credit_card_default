@@ -65,3 +65,27 @@ Starting validation of training data]
 [2023-07-20 21:02:40,109] INFO End of successful training data validation
 
 ]
+[2023-07-23 22:34:25,846] INFO Starting validation of training data]
+[2023-07-23 22:34:25,846] INFO File ./data/data_uploaded.xls exists]
+[2023-07-23 22:34:25,847] ERROR File cannot be opened
+
+]
+[2023-07-23 22:35:22,893] INFO Starting validation of training data]
+[2023-07-23 22:35:22,894] INFO File ./data/data_uploaded.xls exists]
+[2023-07-23 22:35:22,894] ERROR File cannot be opened {e}
+
+]
+[2023-07-23 22:35:37,687] INFO Starting validation of training data]
+[2023-07-23 22:35:37,687] INFO File ./data/data_uploaded.xls exists]
+[2023-07-23 22:35:37,688] ERROR File cannot be opened Missing optional dependency 'xlrd'. Install xlrd >= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
+
+]
+[2023-07-23 22:36:03,943] INFO Starting validation of training data]
+[2023-07-23 22:36:03,943] INFO File ./data/data_uploaded.xls exists]
+[2023-07-23 22:36:06,489] INFO File opened successfully]
+[2023-07-23 22:36:06,490] INFO Column name validation successful]
+[2023-07-23 22:36:06,491] INFO Datatype validation successful]
+[2023-07-23 22:36:06,495] INFO Missing value validation successful]
+[2023-07-23 22:36:06,495] INFO End of successful training data validation
+
+]

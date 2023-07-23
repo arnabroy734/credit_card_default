@@ -42,8 +42,8 @@ class TrainDataValidation:
         try:
             data = pd.read_excel(UPLOADED_DATA,  index_col='ID')
             LOGGER.log_validation(message="File opened successfully", level=logging.INFO)
-        except:
-            LOGGER.log_validation(message="File cannot be opened\n\n", level=logging.ERROR)
+        except Exception as e:
+            LOGGER.log_validation(message=f"File cannot be opened {e}\n\n", level=logging.ERROR)
             raise Exception()
         
         # Step 3:
