@@ -1,30 +1,35 @@
-from path.path import UPLOADED_DATA
+from path.path import UPLOADED_DATA, PREPROCESSED_DATA
 import pandas as pd
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.pipeline import Pipeline, make_pipeline
 from logs.logging import LOGGER
 import logging
+import pprint
 
 class Preprocessor:
     def __init__(self):
         self.pipeline = Pipeline([
-            ('replace', Replace())
+            ('replace', Replace()),
+            ('encoding', Encoding())
         ])
 
-    def preprocess(self):
+    def train_preprocess(self):
 
         """
         Description:
         1. Read uploaded data
         """
         try:
+            LOGGER.log_preprocessing(message="Start of preprocessing training data", level=logging.INFO)
             data = pd.read_excel(UPLOADED_DATA, index_col='ID')
             X = data.drop(['default'], axis=1)
             y = data['default']
-            X = self.pipeline.fit_transform(X)
-            print(X.head(5))
+            X = self.pipeline.fit_transform(X, y)
+            X['default'] = y
+            X.to_csv(PREPROCESSED_DATA, index=False)
+            LOGGER.log_preprocessing(message="Successful end of preprocessing\n\n", level=logging.INFO)
         except Exception as e:
-            LOGGER.log_preprocessing(message=f"Error in preprocessing {e}", level=logging.ERROR)
+            LOGGER.log_preprocessing(message=f"Error in preprocessing {e}\n\n", level=logging.ERROR)
 
 
 class Replace(BaseEstimator, TransformerMixin):
@@ -46,7 +51,7 @@ class Replace(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
     
-    def transform(self, X):
+    def transform(self, X, y=None):
         X['EDUCATION'] = X['EDUCATION'].map(lambda x : 4 if x not in [1,2,3] else x)
         X['MARRIAGE'] = X['MARRIAGE'].map(lambda x: 3 if x not in [1,2] else x)
         for i in range(1,7):
@@ -59,7 +64,7 @@ class Encoding(BaseEstimator, TransformerMixin):
     This class encodes feature Marriage, Sex, Education and PAY_X by probability ratio
     """
 
-    def give_feature_encoding(data, feature, target):
+    def give_feature_encoding(self, data, feature, target):
         """
         Description: Probability ratio encoding
         Parameters: data, feature, target
@@ -76,3 +81,24 @@ class Encoding(BaseEstimator, TransformerMixin):
 
     
         return fearure_encoding
+
+
+    def fit(self, X, y):
+        data = X.copy()
+        data['default'] = y
+
+        self.encodings = {}
+        for feature in ['SEX', 'EDUCATION', 'MARRIAGE']:
+            self.encodings[feature] = self.give_feature_encoding(data, feature, 'default')
+        
+        for i in range(1,7):
+            feature = 'PAY_' + str(i)
+            self.encodings[feature] = self.give_feature_encoding(data, feature, 'default')
+        
+        return self
+    
+    def transform(self, X, y=None):
+        for feature in self.encodings.keys():
+            feature_encoding = self.encodings[feature]
+            X[feature] = X[feature].map(lambda x: feature_encoding[x])
+        return X

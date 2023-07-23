@@ -8,6 +8,6 @@ if __name__=="__main__":
     #     print("Validation faild")
 
     try:
-        Preprocessor().preprocess()
+        Preprocessor().train_preprocess()
     except:
         print("Preprocessing Failed")

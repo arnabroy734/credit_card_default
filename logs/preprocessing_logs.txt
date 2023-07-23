@@ -1,3 +1,12 @@
 [2023-07-23 23:08:37,245] ERROR Error in preprocessing 'utf-8' codec can't decode byte 0xd0 in position 0: invalid continuation byte]
 [2023-07-23 23:09:01,310] ERROR Error in preprocessing name 'display' is not defined]
 [2023-07-23 23:09:21,075] ERROR Error in preprocessing 'NoneType' object has no attribute 'head']
+[2023-07-23 23:35:14,052] ERROR Error in preprocessing name 'fearue_encoding' is not defined]
+[2023-07-23 23:40:39,691] INFO Start of preprocessing training data]
+[2023-07-23 23:40:43,197] INFO Successful end of preprocessing
+
+]
+[2023-07-23 23:42:00,027] INFO Start of preprocessing training data]
+[2023-07-23 23:42:03,508] INFO Successful end of preprocessing
+
+]
