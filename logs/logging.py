@@ -3,11 +3,9 @@ import logging
 
 filenames = dict(
     VALIDATION_LOGS = "./logs/validation_log.txt" ,
-    PREPROCESSING_LOGS = "./logs/preprocessing_logs.txt"   
-    
+    PREPROCESSING_LOGS = "./logs/preprocessing_logs.txt",
+    TRAINING_LOGS = "./logs/training_logs.txt"     
 )
-
-
 
 class AppLogger:
     """
@@ -22,7 +20,6 @@ class AppLogger:
             self.handlers[filename] = logging.FileHandler(filenames[filename])
             self.handlers[filename].setFormatter(formatter)
         
-
 
     def custom_log(self, filename, level=logging.INFO):
         custom_logger = logging.getLogger(filenames[filename])
@@ -43,8 +40,9 @@ class AppLogger:
     def log_preprocessing(self, message, level):
         preprocessing_logger = self.custom_log("PREPROCESSING_LOGS")
         self.write_log(preprocessing_logger, message, level)
-
     
-
+    def log_training(self, message, level):
+        training_logger = self.custom_log("TRAINING_LOGS")
+        self.write_log(training_logger, message, level)
 
 LOGGER = AppLogger()

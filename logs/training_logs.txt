@@ -1,0 +1,67 @@
+[2023-07-24 22:11:28,102] INFO Starting of training decision tree]
+[2023-07-24 22:12:12,108] INFO Test f1 - 0.4887516541685047]
+[2023-07-24 22:12:12,108] INFO Test precision - 0.5699588477366255]
+[2023-07-24 22:12:12,108] INFO Test recall - 0.4277992277992278]
+[2023-07-24 22:12:12,108] INFO Test auc - 0.6694787849941941
+
+]
+[2023-07-24 22:17:23,273] INFO Starting of training decision tree]
+[2023-07-24 22:17:35,825] INFO Test f1 - 0.4887516541685047]
+[2023-07-24 22:17:35,826] INFO Test precision - 0.5699588477366255]
+[2023-07-24 22:17:35,826] INFO Test recall - 0.4277992277992278]
+[2023-07-24 22:17:35,826] INFO Test auc - 0.6694787849941941
+
+]
+[2023-07-24 22:24:06,864] INFO Starting of training logistic regression]
+[2023-07-24 22:24:09,772] INFO Test f1 - 0.5331236485158246]
+[2023-07-24 22:24:09,772] INFO Test precision - 0.5430516619943933]
+[2023-07-24 22:24:09,772] INFO Test recall - 0.5235521235521235]
+[2023-07-24 22:24:09,772] INFO Test auc - 0.7011490692149566
+
+]
+[2023-07-24 22:25:08,228] INFO Starting of training logistic regression]
+[2023-07-24 22:25:10,963] INFO Test f1 - 0.5331236485158246]
+[2023-07-24 22:25:10,963] INFO Test precision - 0.5430516619943933]
+[2023-07-24 22:25:10,963] INFO Test recall - 0.5235521235521235]
+[2023-07-24 22:25:10,963] INFO Test auc - 0.7011490692149566]
+[2023-07-24 22:25:10,967] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('standardscaler', StandardScaler()),
+                ('logisticregression',
+                 LogisticRegression(C=0.1, random_state=100))])
+
+]
+[2023-07-24 22:25:48,866] INFO Starting of training decision tree]
+[2023-07-24 22:26:00,841] INFO Test f1 - 0.4887516541685047]
+[2023-07-24 22:26:00,841] INFO Test precision - 0.5699588477366255]
+[2023-07-24 22:26:00,841] INFO Test recall - 0.4277992277992278]
+[2023-07-24 22:26:00,841] INFO Test auc - 0.6694787849941941]
+[2023-07-24 22:26:00,844] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('decisiontreeclassifier',
+                 DecisionTreeClassifier(max_depth=10, random_state=100,
+                                        splitter='random'))])
+
+]
+[2023-07-24 22:30:57,975] INFO Starting of training random forest]
+[2023-07-24 22:38:09,153] INFO Starting of training random forest]
+[2023-07-24 22:52:46,536] INFO Test f1 - 0.4986301369863014]
+[2023-07-24 22:52:46,536] INFO Test precision - 0.6100558659217877]
+[2023-07-24 22:52:46,537] INFO Test recall - 0.42162162162162165]
+[2023-07-24 22:52:46,537] INFO Test auc - 0.6737226067725537]
+[2023-07-24 22:52:46,540] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('randomforestclassifier',
+                 RandomForestClassifier(max_features=0.6, max_samples=0.1,
+                                        n_estimators=200, n_jobs=-1,
+                                        random_state=100))])
+
+]
+[2023-07-24 22:55:53,856] INFO Starting of training logistic regression]
+[2023-07-24 22:56:02,740] INFO Test f1 - 0.5351724137931034]
+[2023-07-24 22:56:02,740] INFO Test precision - 0.5464788732394367]
+[2023-07-24 22:56:02,740] INFO Test recall - 0.5243243243243243]
+[2023-07-24 22:56:02,740] INFO Test auc - 0.7022790590803343]
+[2023-07-24 22:56:02,743] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('standardscaler', StandardScaler()),
+                ('logisticregression',
+                 LogisticRegression(C=0.01, random_state=100))])
+
+]
