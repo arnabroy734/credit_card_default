@@ -10,3 +10,19 @@
 [2023-07-23 23:42:03,508] INFO Successful end of preprocessing
 
 ]
+[2023-07-25 12:26:34,063] INFO Start of preprocessing training data]
+[2023-07-25 12:26:34,064] ERROR Error in preprocessing Missing optional dependency 'xlrd'. Install xlrd >= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
+
+]
+[2023-07-25 12:27:01,916] INFO Start of preprocessing training data]
+[2023-07-25 12:27:04,832] INFO Successful end of preprocessing
+
+]
+[2023-07-25 13:07:49,518] INFO Start of preprocessing training data]
+[2023-07-25 13:07:53,038] INFO Successful end of preprocessing
+
+]
+[2023-07-25 13:37:51,567] INFO Start of preprocessing training data]
+[2023-07-25 13:37:54,528] INFO Successful end of preprocessing
+
+]

@@ -10,7 +10,7 @@ class Preprocessor:
     def __init__(self):
         self.pipeline = Pipeline([
             ('replace', Replace()),
-            ('encoding', Encoding())
+            # ('encoding', Encoding())
         ])
 
     def train_preprocess(self):
