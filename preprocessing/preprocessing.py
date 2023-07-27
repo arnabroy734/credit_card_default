@@ -103,7 +103,6 @@ class Encoding(BaseEstimator, TransformerMixin):
         fearure_encoding = {}
         for x in data[feature].unique():
             fearure_encoding[x] = feature_group[(x,1)]/feature_group[(x,0)]
-            # fearure_encoding[x] = feature_group[(x,0)]
 
     
         return fearure_encoding
