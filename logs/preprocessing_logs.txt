@@ -30,3 +30,49 @@
 [2023-07-26 08:05:10,782] INFO Successful end of preprocessing
 
 ]
+[2023-07-27 13:39:06,484] INFO Start of preprocessing training data]
+[2023-07-27 13:39:09,904] INFO Successful end of preprocessing. Preprocessor saved as ./models/preprocessor.pkl
+
+]
+[2023-07-27 13:53:00,141] INFO Start of preprocessing predcition data]
+[2023-07-27 13:53:02,522] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 13:53:30,305] INFO Start of preprocessing predcition data]
+[2023-07-27 13:53:32,688] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:07:59,961] INFO Start of preprocessing predcition data]
+[2023-07-27 14:08:02,346] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:08:39,114] INFO Start of preprocessing predcition data]
+[2023-07-27 14:08:41,557] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:08:41,557] ERROR Error in preprocessing prediction data name 'data' is not defined
+
+]
+[2023-07-27 14:09:06,462] INFO Start of preprocessing predcition data]
+[2023-07-27 14:09:08,927] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:09:08,927] ERROR Error in preprocessing prediction data name 'data' is not defined
+
+]
+[2023-07-27 14:09:49,375] INFO Start of preprocessing predcition data]
+[2023-07-27 14:09:51,781] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:11:06,396] INFO Start of preprocessing predcition data]
+[2023-07-27 14:11:08,786] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:12:40,014] INFO Start of preprocessing predcition data]
+[2023-07-27 14:12:42,437] INFO Successful end of preprocessing of prediction data 
+
+]
+[2023-07-27 14:24:17,331] INFO Start of preprocessing predcition data]
+[2023-07-27 14:24:19,745] INFO Successful end of preprocessing of prediction data 
+
+]

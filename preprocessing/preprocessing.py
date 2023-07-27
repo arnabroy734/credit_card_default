@@ -1,10 +1,11 @@
-from path.path import UPLOADED_DATA, PREPROCESSED_DATA
+from path.path import UPLOADED_DATA, PREPROCESSED_DATA, PREDICTION_INPUT, PREDICTION_PREPROCESSED, PREPROCESSOR
 import pandas as pd
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.pipeline import Pipeline, make_pipeline
 from logs.logging import LOGGER
 import logging
 import pprint
+import pickle
 
 class Preprocessor:
     def __init__(self):
@@ -28,9 +29,33 @@ class Preprocessor:
             X = self.pipeline.fit_transform(X, y)
             X['default'] = y
             X.to_csv(PREPROCESSED_DATA, index=False)
-            LOGGER.log_preprocessing(message="Successful end of preprocessing\n\n", level=logging.INFO)
+            # Save preprocessing file
+            with open(PREPROCESSOR, 'wb') as f:
+                pickle.dump(self, f)
+                f.close()
+            LOGGER.log_preprocessing(message=f"Successful end of preprocessing. Preprocessor saved as {PREPROCESSOR}\n\n", level=logging.INFO)
         except Exception as e:
             LOGGER.log_preprocessing(message=f"Error in preprocessing {e}\n\n", level=logging.ERROR)
+    
+    def prediction_preprocess(self):
+        """
+        Description:
+        1. Read uploaded data
+        2. Preprocess data using pipeline
+        3. Return (True, data) if preprocessing is successful
+        4. Return (False, None) if preprocessing goes wrong 
+        """
+        try:
+            LOGGER.log_preprocessing(message="Start of preprocessing predcition data", level=logging.INFO)
+            X = pd.read_excel(PREDICTION_INPUT, index_col='ID')
+            X = self.pipeline.transform(X)
+            X.to_csv(PREDICTION_PREPROCESSED, index=False)
+            LOGGER.log_preprocessing(message="Successful end of preprocessing of prediction data \n\n", level=logging.INFO)
+            return (True, X)
+        except Exception as e:
+            LOGGER.log_preprocessing(message=f"Error in preprocessing prediction data {e}\n\n", level=logging.ERROR)
+            return (False, None)
+
 
 
 class Replace(BaseEstimator, TransformerMixin):

@@ -44,5 +44,6 @@ class AppLogger:
     def log_training(self, message, level):
         training_logger = self.custom_log("TRAINING_LOGS")
         self.write_log(training_logger, message, level)
+    
 
 LOGGER = AppLogger()
