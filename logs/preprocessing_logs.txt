@@ -26,3 +26,7 @@
 [2023-07-25 13:37:54,528] INFO Successful end of preprocessing
 
 ]
+[2023-07-26 08:05:07,911] INFO Start of preprocessing training data]
+[2023-07-26 08:05:10,782] INFO Successful end of preprocessing
+
+]

@@ -10,7 +10,7 @@ class Preprocessor:
     def __init__(self):
         self.pipeline = Pipeline([
             ('replace', Replace()),
-            # ('encoding', Encoding())
+            ('encoding', Encoding())
         ])
 
     def train_preprocess(self):
@@ -18,6 +18,7 @@ class Preprocessor:
         """
         Description:
         1. Read uploaded data
+        2. Preprocess data using pipeline
         """
         try:
             LOGGER.log_preprocessing(message="Start of preprocessing training data", level=logging.INFO)
