@@ -3,6 +3,7 @@ from preprocessing.preprocessing import Preprocessor
 from path.path import PREPROCESSOR, BEST_MODEL, PREDICTION_OUTPUT, PREDICTION_INPUT 
 import pickle
 import pandas as pd
+import numpy as np
 
 class PredictionPipeline:
     """
@@ -56,10 +57,12 @@ class PredictionPipeline:
             data = pd.read_excel(PREDICTION_INPUT, index_col='ID')
             data['default'] = y_pred
             data.to_csv(PREDICTION_OUTPUT)
+            total_customers = data.shape[0]
+            total_defaulters = np.count_nonzero(y_pred)
         except Exception as e:
             return (False, f"Something went worng during final prediction stage - {e}")
         
         
-        return (True, "Prediction successful")
+        return (True, f"Prediction successful. Out of {total_customers} customers {total_defaulters} are going to default next month.")
 
         
