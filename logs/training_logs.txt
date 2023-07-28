@@ -72,3 +72,83 @@
 [2023-07-26 10:17:11,641] INFO Best model test auc - 0.698491413944861
 
 ]
+[2023-07-28 11:54:40,160] INFO Starting of training decision tree]
+[2023-07-28 11:56:07,244] INFO CV f1 score - 0.5053446299569055]
+[2023-07-28 11:56:07,244] INFO Test f1 - 0.5001756234632947]
+[2023-07-28 11:56:07,244] INFO Test precision - 0.46811308349769887]
+[2023-07-28 11:56:07,245] INFO Test recall - 0.5369532428355958]
+[2023-07-28 11:56:07,245] INFO Test auc - 0.6819340454657224]
+[2023-07-28 11:56:07,250] INFO Best model - Pipeline(steps=[('smoteenn', SMOTEENN(random_state=42)),
+                ('decisiontreeclassifier',
+                 DecisionTreeClassifier(max_depth=10, random_state=100,
+                                        splitter='random'))])
+
+]
+[2023-07-28 11:56:07,250] INFO Starting of training logistic regression]
+[2023-07-28 11:56:27,386] INFO CV f1 score - 0.533746700452929]
+[2023-07-28 11:56:27,386] INFO Test f1 - 0.5314307751639028]
+[2023-07-28 11:56:27,387] INFO Test precision - 0.5438042620363063]
+[2023-07-28 11:56:27,387] INFO Test recall - 0.5196078431372549]
+[2023-07-28 11:56:27,387] INFO Test auc - 0.6979725137808653]
+[2023-07-28 11:56:27,391] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('standardscaler', StandardScaler()),
+                ('logisticregression',
+                 LogisticRegression(C=0.01, random_state=100))])
+
+]
+[2023-07-28 11:56:27,391] INFO Starting of training random forest]
+[2023-07-28 12:00:43,387] INFO CV f1 score - 0.5338250711982065]
+[2023-07-28 12:00:43,388] INFO Test f1 - 0.527891156462585]
+[2023-07-28 12:00:43,388] INFO Test precision - 0.48079306071871125]
+[2023-07-28 12:00:43,388] INFO Test recall - 0.5852187028657617]
+[2023-07-28 12:00:43,388] INFO Test auc - 0.7029645076160217]
+[2023-07-28 12:00:43,392] INFO Best model - Pipeline(steps=[('smoteenn', SMOTEENN()),
+                ('randomforestclassifier',
+                 RandomForestClassifier(max_features=0.7, max_samples=0.3,
+                                        n_estimators=200, n_jobs=-1,
+                                        random_state=100))])
+
+]
+[2023-07-28 12:00:43,392] INFO Starting of training xgboost model]
+[2023-07-28 12:30:38,762] INFO CV f1 score - 0.5317929742507456]
+[2023-07-28 12:30:38,763] INFO Test f1 - 0.5281814959234313]
+[2023-07-28 12:30:38,763] INFO Test precision - 0.4983277591973244]
+[2023-07-28 12:30:38,763] INFO Test recall - 0.5618401206636501]
+[2023-07-28 12:30:38,763] INFO Test auc - 0.7006889948632756]
+[2023-07-28 12:30:38,769] INFO Best model - Pipeline(steps=[('smoteenn', SMOTEENN(random_state=42)),
+                ('xgbclassifier',
+                 XGBClassifier(base_score=None, booster=None, callbacks=None,
+                               colsample_bylevel=None, colsample_bynode=None,
+                               colsample_bytree=None,
+                               early_stopping_rounds=None,
+                               enable_categorical=False, eval_metric=None,
+                               feature_types=None, gamma=None, gpu_id=None,
+                               grow_policy=None, importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=3, max_leaves=None,
+                               min_child_weight=None, missing=nan,
+                               monotone_constraints=None, n_estimators=100,
+                               n_jobs=-1, num_parallel_tree=None,
+                               predictor=None, random_state=100, ...))])
+
+]
+[2023-07-28 13:55:20,153] INFO CV f1 score - 0.5278752400879607]
+[2023-07-28 13:55:20,154] INFO Test f1 - 0.5333853963295587]
+[2023-07-28 13:55:20,154] INFO Test precision - 0.5530364372469636]
+[2023-07-28 13:55:20,154] INFO Test recall - 0.5150829562594268]
+[2023-07-28 13:55:20,154] INFO Test auc - 0.698491413944861]
+[2023-07-28 13:55:20,157] INFO Best model - Pipeline(steps=[('smote', SMOTE(random_state=42, sampling_strategy='minority')),
+                ('standardscaler', StandardScaler()),
+                ('svc', SVC(C=0.1, random_state=100))])
+
+]
+[2023-07-28 13:55:20,258] INFO Best model is <training.tune_model.RF object at 0x7fcd10bd1280>]
+[2023-07-28 13:55:20,258] INFO Best CV f1 score - 0.5338250711982065]
+[2023-07-28 13:55:20,258] INFO Best model test f1 - 0.527891156462585]
+[2023-07-28 13:55:20,258] INFO Best model test precision - 0.48079306071871125]
+[2023-07-28 13:55:20,258] INFO Best model test recall - 0.5852187028657617]
+[2023-07-28 13:55:20,258] INFO Best model test auc - 0.7029645076160217
+
+]

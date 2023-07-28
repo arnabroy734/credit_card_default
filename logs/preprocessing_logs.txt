@@ -92,3 +92,7 @@
 [2023-07-28 07:30:21,254] INFO Successful end of preprocessing of prediction data 
 
 ]
+[2023-07-28 13:57:55,339] INFO Start of preprocessing predcition data]
+[2023-07-28 13:57:58,623] INFO Successful end of preprocessing of prediction data 
+
+]

@@ -267,3 +267,12 @@ Starting validation of training data]
 [2023-07-28 07:30:18,935] INFO End of successful prediction input data validation
 
 ]
+[2023-07-28 13:57:52,943] INFO Starting validation of prediction input data]
+[2023-07-28 13:57:52,943] INFO File ./data/prediction_input.xls exists]
+[2023-07-28 13:57:55,331] INFO File ./data/prediction_input.xls opened successfully]
+[2023-07-28 13:57:55,331] INFO Column name validation successful]
+[2023-07-28 13:57:55,333] INFO Datatype validation successful]
+[2023-07-28 13:57:55,337] INFO Missing value validation successful]
+[2023-07-28 13:57:55,337] INFO End of successful prediction input data validation
+
+]

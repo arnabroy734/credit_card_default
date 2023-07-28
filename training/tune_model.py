@@ -24,7 +24,7 @@ def find_best_model():
     1. Read data
     2. Split in train and test
     3. Fit data to each type of model
-    4. Check the test f1 score for each model
+    4. Check the best_score_ (mean score of best estimator) score for each model
     5. Save the best model with highest f1 score
     """
     best_model = None
@@ -45,12 +45,13 @@ def find_best_model():
         models[model].tune_hyperparameter(X_train, X_test, y_train, y_test, cv)
         if best_model is None:
             best_model = models[model]
-        if models[model].test_f1 > best_model.test_f1:
+        if models[model].best_score > best_model.best_score:
             best_model = models[model]
     with open(BEST_MODEL, 'wb') as f:
         pickle.dump(best_model, f)
         f.close()
     LOGGER.log_training(message=f'Best model is {best_model}', level=logging.INFO)
+    LOGGER.log_training(message=f"Best CV f1 score - {best_model.best_score}", level=logging.INFO)
     LOGGER.log_training(message=f"Best model test f1 - {best_model.test_f1}", level=logging.INFO)
     LOGGER.log_training(message=f"Best model test precision - {best_model.test_precision}", level=logging.INFO)
     LOGGER.log_training(message=f"Best model test recall - {best_model.test_recall}", level=logging.INFO)
@@ -85,11 +86,13 @@ class DT:
         self.model = grid_imb.best_estimator_
         y_pred = self.predict(X_test)
 
+        self.best_score = grid_imb.best_score_
         self.test_f1 = f1_score(y_test, y_pred)
         self.test_precision = precision_score(y_test, y_pred)
         self.test_recall = recall_score(y_test, y_pred)
         self.test_auc = roc_auc_score(y_test, y_pred)
 
+        LOGGER.log_training(message=f"CV f1 score - {self.best_score}", level=logging.INFO)
         LOGGER.log_training(message=f"Test f1 - {self.test_f1}", level=logging.INFO)
         LOGGER.log_training(message=f"Test precision - {self.test_precision}", level=logging.INFO)
         LOGGER.log_training(message=f"Test recall - {self.test_recall}", level=logging.INFO)
@@ -125,11 +128,13 @@ class SVM:
         self.model = grid_imb.best_estimator_
         y_pred = self.predict(X_test)
 
+        self.best_score = grid_imb.best_score_
         self.test_f1 = f1_score(y_test, y_pred)
         self.test_precision = precision_score(y_test, y_pred)
         self.test_recall = recall_score(y_test, y_pred)
         self.test_auc = roc_auc_score(y_test, y_pred)
 
+        LOGGER.log_training(message=f"CV f1 score - {self.best_score}", level=logging.INFO)
         LOGGER.log_training(message=f"Test f1 - {self.test_f1}", level=logging.INFO)
         LOGGER.log_training(message=f"Test precision - {self.test_precision}", level=logging.INFO)
         LOGGER.log_training(message=f"Test recall - {self.test_recall}", level=logging.INFO)
@@ -166,11 +171,13 @@ class Logistic:
         self.model = grid_imb.best_estimator_
         y_pred = self.predict(X_test)
 
+        self.best_score = grid_imb.best_score_
         self.test_f1 = f1_score(y_test, y_pred)
         self.test_precision = precision_score(y_test, y_pred)
         self.test_recall = recall_score(y_test, y_pred)
         self.test_auc = roc_auc_score(y_test, y_pred)
 
+        LOGGER.log_training(message=f"CV f1 score - {self.best_score}", level=logging.INFO)
         LOGGER.log_training(message=f"Test f1 - {self.test_f1}", level=logging.INFO)
         LOGGER.log_training(message=f"Test precision - {self.test_precision}", level=logging.INFO)
         LOGGER.log_training(message=f"Test recall - {self.test_recall}", level=logging.INFO)
@@ -208,11 +215,13 @@ class RF:
         self.model = grid_imb.best_estimator_
         y_pred = self.predict(X_test)
 
+        self.best_score = grid_imb.best_score_
         self.test_f1 = f1_score(y_test, y_pred)
         self.test_precision = precision_score(y_test, y_pred)
         self.test_recall = recall_score(y_test, y_pred)
         self.test_auc = roc_auc_score(y_test, y_pred)
 
+        LOGGER.log_training(message=f"CV f1 score - {self.best_score}", level=logging.INFO)
         LOGGER.log_training(message=f"Test f1 - {self.test_f1}", level=logging.INFO)
         LOGGER.log_training(message=f"Test precision - {self.test_precision}", level=logging.INFO)
         LOGGER.log_training(message=f"Test recall - {self.test_recall}", level=logging.INFO)
@@ -249,11 +258,13 @@ class XGB:
         self.model = grid_imb.best_estimator_
         y_pred = self.predict(X_test)
 
+        self.best_score = grid_imb.best_score_
         self.test_f1 = f1_score(y_test, y_pred)
         self.test_precision = precision_score(y_test, y_pred)
         self.test_recall = recall_score(y_test, y_pred)
         self.test_auc = roc_auc_score(y_test, y_pred)
 
+        LOGGER.log_training(message=f"CV f1 score - {self.best_score}", level=logging.INFO)
         LOGGER.log_training(message=f"Test f1 - {self.test_f1}", level=logging.INFO)
         LOGGER.log_training(message=f"Test precision - {self.test_precision}", level=logging.INFO)
         LOGGER.log_training(message=f"Test recall - {self.test_recall}", level=logging.INFO)
