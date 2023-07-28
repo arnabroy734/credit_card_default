@@ -1,6 +1,6 @@
 from validation.validation import Validation
 from preprocessing.preprocessing import Preprocessor
-from path.path import PREPROCESSOR, BEST_MODEL, PREDICTION_OUTPUT 
+from path.path import PREPROCESSOR, BEST_MODEL, PREDICTION_OUTPUT, PREDICTION_INPUT 
 import pickle
 import pandas as pd
 
@@ -24,10 +24,10 @@ class PredictionPipeline:
                                 if status is True prediction is successful, so send success message
         """
         # Validation
-        status, mesage = Validation().validate_prediction()
+        status, message = Validation().validate_prediction()
         if status == False:
             return (False, message)
-        
+
         # Preprocessor: de-serialisation
         try:
             with open(PREPROCESSOR, 'rb') as f:
@@ -37,9 +37,10 @@ class PredictionPipeline:
             return (False, "Saved preprocessor model cannot be de-serialised")
         
         # Preprocessing
-        status, data = preprocessor.prediction_preprocess()
+        status, data_preprocessed = preprocessor.prediction_preprocess()
         if  status == False:
             return (False, "Something went wrong during preprocessing the data")
+        
         
         # De-serialise model
         try:
@@ -51,11 +52,13 @@ class PredictionPipeline:
         
         # Do prediction and save
         try:
-            y_pred = model.predict(data)
+            y_pred = model.predict(data_preprocessed)
+            data = pd.read_excel(PREDICTION_INPUT, index_col='ID')
             data['default'] = y_pred
             data.to_csv(PREDICTION_OUTPUT)
         except Exception as e:
             return (False, f"Something went worng during final prediction stage - {e}")
+        
         
         return (True, "Prediction successful")
 
