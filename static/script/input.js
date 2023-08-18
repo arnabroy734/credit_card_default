@@ -8,6 +8,7 @@ const predictButton = document.getElementById("predictButton");
 const predictionProgress = document.getElementById("predictionProgress");
 const predictionMessageSuccess = document.getElementById("predictionMessageSuccess")
 const predictionMessageFailure = document.getElementById("predictionMessageFailure")
+const downloadReport = document.getElementById("downloadReport")
 
 
 fileInput.addEventListener("change", function () {
@@ -21,6 +22,10 @@ fileInput.addEventListener("change", function () {
 
     uploadResultFailure.textContent = "";
     uploadResultSuccess.textContent = "";
+    predictionMessageSuccess.textContent = "";
+    predictionMessageFailure.textContent = "";
+    downloadReport.textContent = "";
+
 });
 
 uploadButton.addEventListener("click", function (event) {
@@ -93,6 +98,7 @@ predictButton.addEventListener("click", function (event) {
         .then((data) => {
             if (data['status'] == 200) {
                 predictionMessageSuccess.textContent = data['message']
+                downloadReport.textContent = "Download Full Report"
             }
             else if (data['status'] == 400) {
                 predictionMessageFailure.textContent = data['message']
@@ -116,3 +122,4 @@ function getFileExtension(filename) {
     // If no extension was found, return empthy string
     return "";
 }
+

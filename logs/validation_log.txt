@@ -285,3 +285,76 @@ Starting validation of training data]
 [2023-07-28 14:09:09,991] INFO End of successful prediction input data validation
 
 ]
+[2023-07-28 19:03:15,218] INFO Starting validation of prediction input data]
+[2023-07-28 19:03:15,218] INFO File ./data/prediction_input.xls exists]
+[2023-07-28 19:03:16,845] INFO File ./data/prediction_input.xls opened successfully]
+[2023-07-28 19:03:16,845] INFO Column name validation successful]
+[2023-07-28 19:03:16,854] INFO Datatype validation successful]
+[2023-07-28 19:03:16,859] INFO Missing value validation successful]
+[2023-07-28 19:03:16,859] INFO End of successful prediction input data validation
+
+]
+[2023-07-28 19:40:06,743] INFO Starting validation of prediction input data]
+[2023-07-28 19:40:06,744] INFO File ./data/prediction_input.xls exists]
+[2023-07-28 19:40:08,334] INFO File ./data/prediction_input.xls opened successfully]
+[2023-07-28 19:40:08,334] INFO Column name validation successful]
+[2023-07-28 19:40:08,335] INFO Datatype validation successful]
+[2023-07-28 19:40:08,339] INFO Missing value validation successful]
+[2023-07-28 19:40:08,339] INFO End of successful prediction input data validation
+
+]
+[2023-07-28 19:41:18,624] INFO Starting validation of prediction input data]
+[2023-07-28 19:41:18,624] INFO File ./data/prediction_input.xls exists]
+[2023-07-28 19:41:19,055] INFO File ./data/prediction_input.xls opened successfully]
+[2023-07-28 19:41:19,055] INFO Column name validation successful]
+[2023-07-28 19:41:19,056] INFO Datatype validation successful]
+[2023-07-28 19:41:19,058] INFO Missing value validation successful]
+[2023-07-28 19:41:19,059] INFO End of successful prediction input data validation
+
+]
+[2023-07-28 19:50:44,067] INFO Starting validation of prediction input data]
+[2023-07-28 19:50:44,068] INFO File ./data/prediction_input.xls exists]
+[2023-07-28 19:50:45,717] ERROR File ./data/prediction_input.xls cannot be opened Index ID invalid
+
+]
+[2023-08-18 06:21:32,820] INFO Starting validation of prediction input data]
+[2023-08-18 06:21:32,820] INFO File ./data/prediction_input.xls exists]
+[2023-08-18 06:21:33,105] ERROR File ./data/prediction_input.xls cannot be opened Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+
+]
+[2023-08-18 06:27:22,169] INFO Starting validation of prediction input data]
+[2023-08-18 06:27:22,170] INFO File ./data/prediction_input.xls exists]
+[2023-08-18 06:27:22,418] INFO File ./data/prediction_input.xls opened successfully]
+[2023-08-18 06:27:22,418] INFO Column name validation successful]
+[2023-08-18 06:27:22,419] INFO Datatype validation successful]
+[2023-08-18 06:27:22,422] INFO Missing value validation successful]
+[2023-08-18 06:27:22,422] INFO End of successful prediction input data validation
+
+]
+[2023-08-18 06:31:20,863] INFO Starting validation of prediction input data]
+[2023-08-18 06:31:20,863] INFO File ./data/prediction_input.xls exists]
+[2023-08-18 06:31:22,388] INFO File ./data/prediction_input.xls opened successfully]
+[2023-08-18 06:31:22,388] INFO Column name validation successful]
+[2023-08-18 06:31:22,395] INFO Datatype validation successful]
+[2023-08-18 06:31:22,401] INFO Missing value validation successful]
+[2023-08-18 06:31:22,401] INFO End of successful prediction input data validation
+
+]
+[2023-08-18 06:32:16,302] INFO Starting validation of prediction input data]
+[2023-08-18 06:32:16,302] INFO File ./data/prediction_input.xls exists]
+[2023-08-18 06:32:16,329] INFO File ./data/prediction_input.xls opened successfully]
+[2023-08-18 06:32:16,330] INFO Column name validation successful]
+[2023-08-18 06:32:16,330] INFO Datatype validation successful]
+[2023-08-18 06:32:16,333] INFO Missing value validation successful]
+[2023-08-18 06:32:16,334] INFO End of successful prediction input data validation
+
+]
+[2023-08-18 06:32:32,775] INFO Starting validation of prediction input data]
+[2023-08-18 06:32:32,775] INFO File ./data/prediction_input.xls exists]
+[2023-08-18 06:32:34,299] INFO File ./data/prediction_input.xls opened successfully]
+[2023-08-18 06:32:34,299] INFO Column name validation successful]
+[2023-08-18 06:32:34,300] INFO Datatype validation successful]
+[2023-08-18 06:32:34,305] INFO Missing value validation successful]
+[2023-08-18 06:32:34,305] INFO End of successful prediction input data validation
+
+]
