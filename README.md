@@ -35,5 +35,13 @@ As we don't have the required domain knowledge we set **F1 score** as performanc
 ## Project Architecture
 The project is developed as an online web application where user can **upload** excel file contaning historical data of customers, run the **prediction** after successful upload and then **download** the excel file. **The project also has option to re-train the model but this feature is not exposed as API due to resource limitation on server side.**
 
-### High Level Architecture of Model Training Process
+### Architecture of Model Training Process
+
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/72a71c69-1c11-4ae6-9bdf-e6a4860e52cc)
+
+### Architecture of Web Application for Prediction
+
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/2c755b7d-f65c-4367-b12e-4569a776e9f4)
+
+
 
