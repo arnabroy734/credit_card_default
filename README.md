@@ -43,5 +43,36 @@ The project is developed as an online web application where user can **upload** 
 
 ![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/2c755b7d-f65c-4367-b12e-4569a776e9f4)
 
+## Deployment
+The entire project is build as docker container. The container runs two images - 
+
+ - **app**: this image runs the flask application with gunicorn server
+ - **nginx**: this image runs Nginx server which talks to **app**
+
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/3f17ff04-7185-42f4-b350-d10480e96c76)
+
+Finally the container is deployed in [AWS](http://ec2-65-2-132-138.ap-south-1.compute.amazonaws.com/)
+
+## Screenshots
+### Initial Screen
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/5787a758-7a11-4b3e-bf2a-6ab162bebe59)
+
+
+### Selecting Wrong File
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/b7a9fbf0-4be2-46d2-ba69-e731f4840105)
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/bc49eaf4-45cc-47be-9891-f9a3e177af8e)
+
+
+### Validation Failed on Input File
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/100cf071-d760-4ba0-b27a-d5d92609d593)
+
+
+### Successful Prediction
+![image](https://github.com/arnabroy734/credit_card_default/assets/86049035/368c2c4d-b23d-41db-a14c-9548a66d1fd1)
+
+
+
+
+
 
 
